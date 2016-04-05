@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1> Contact database</h1>
+    {% block content %}
+        <h4>Players</h4>
+       <ul>
+            {% for c in contact_list %}
+               <li>
+                    {{ c.number }}
+                    {{ c.first_name }}
+                    {{ c.last_name }}
+               </li>
+            {%  endfor %}
+
+        </ul>
+
+    {% endblock %}
+
+</body>
+</html>
